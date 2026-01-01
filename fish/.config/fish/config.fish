@@ -25,7 +25,9 @@ alias cat='bat'
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-  
+    eval (ssh-agent -c)
+    ssh-add
+
   # Set up fzf key bindings
     fzf --fish | source
     starship init fish | source
