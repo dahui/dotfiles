@@ -1,7 +1,7 @@
 font-family = "CaskaydiaCove Nerd Font"
 # font-style = "Ret"
-font-size = "10"
+font-size = "13"
 theme = "Catppuccin Mocha" 
 
-window-width = 125
+window-width = 130
 window-height = 40
