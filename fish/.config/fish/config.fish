@@ -32,5 +32,10 @@ if status is-interactive
     starship init fish | source
 end
 
+set -l ostype (uname -o)
+if string match -q "Darwin" $ostype
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+end
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
