@@ -45,6 +45,7 @@ alias cat='bat'
 alias claude="/Users/606563/.claude/local/claude"
 alias kubectl='kubecolor'
 
+export $XDG_CONFIG_HOME="$HOME/.config"
 export GOPATH="/Users/606563/dev/golang"
 export EDITOR='code -w'
 #export NVM_DIR="$HOME/.nvm"
