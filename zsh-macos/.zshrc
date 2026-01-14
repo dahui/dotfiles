@@ -37,16 +37,17 @@ _evalcache /opt/homebrew/bin/brew shellenv
 # Generate our prompt
 _evalcache starship init zsh
 
+# Add coreutils GNU tools to PATH
 PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 # alias ls='ls -h --color'
 alias aws='aws --no-cli-pager'
 alias ls='eza -lh --color=always --icons=always --git --group-directories-first'
 alias cat='bat'
-alias claude="/Users/606563/.claude/local/claude"
+alias claude="$HOME/.claude/local/claude"
 alias kubectl='kubecolor'
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export GOPATH="/Users/606563/dev/golang"
+export GOPATH="$HOME/dev/golang"
 export EDITOR='code -w'
 #export NVM_DIR="$HOME/.nvm"
 #  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
