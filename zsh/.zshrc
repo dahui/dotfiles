@@ -105,7 +105,7 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 eval "$(starship init zsh)"
 
 # unset bullshit colors for tab completion
-zstyle ':completion:*' list-colors
+# zstyle ':completion:*' list-colors
 
 
 export FZF_BASE=/usr/share/fzf
