@@ -1,8 +1,13 @@
 #!/bin/bash
 
+#
+# This script converts a basic ArchLinux WSL install into CachyOS.
+#
+
+#
 # Get some basic tools that are missing.
 #
-pacman -Sy --noconfirm sudo curl wget which base-devel
+pacman -Sy --noconfirm sudo curl wget which base-devel openssh git glibc-locales
 
 # Install the CachyOS repositories.
 #
