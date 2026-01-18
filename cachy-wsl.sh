@@ -98,3 +98,29 @@ sudo pacman -Sy --noconfirm cachyos-hooks \
       openssh \
       code
 
+
+# Yes/No function. We need to move this above and put in logic to create a user, set shell, etc. based on user input.
+ask_yes_no() {
+    local prompt="${1:-Are you sure?}" # Default prompt if none provided
+    local default_yes="${2:-Y}"         # Default answer if none provided (Y/n)
+    
+    # Loop until valid input is received
+    while true; do
+        read -p "$prompt [$default_yes/n] " answer
+        local input=$(echo "$answer" | tr '[A-Z]' '[a-z]') # Convert to lowercase
+
+        case "$input" in
+            y|yes) return 0 ;; # Return 0 for success (yes)
+            n|no)  return 1 ;; # Return 1 for failure (no)
+            "" )
+                # If the default is "Y", treat empty input as "yes"
+                if [ "$default_yes" = "Y" ] || [ "$default_yes" = "y" ]; then
+                    return 0
+                else
+                    return 1 # If the default is "n", treat empty input as "no"
+                fi
+            ;;
+            *) echo "Invalid input. Please enter yes or no.";;
+        esac
+    done
+}
