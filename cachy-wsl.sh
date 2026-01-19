@@ -7,7 +7,7 @@
 #
 # Get some basic tools that are missing.
 #
-pacman -Sy --noconfirm sudo curl wget which base-devel openssh git glibc-locales
+pacman -Sy --noconfirm sudo curl wget which base-devel openssh git glibc-locales lsb-release
 
 # Install the CachyOS repositories.
 #
