@@ -4,7 +4,7 @@ echo "Installing packages..."
 paru -Sy --repo --skipreview stow hhd hhd-ui acpi_call \
     vivaldi ghostty linux-bazzite-bin cachyos-gaming-meta \
     vscode bazaar protonup-qt protonplus sbctl ryzenadj dkms \
-    nerd-fonts wireguard-tools minio-client iio-sensor-proxy
+    nerd-fonts wireguard-tools minio-client iio-sensor-proxy rofi
 
 echo "configuring secure boot..."
 sudo sbctl create-keys
@@ -22,6 +22,3 @@ sudo cp -a cachy-configs/etc/modprobe.d/* /etc/modprobe.d
 sudo chown root:root /etc/modprobe.d/*
 echo "done!"
 
-echo "Enabling auto-rotation..."
-sudo systemctl enable --now iio-sensor-proxy
-echo "done!"
