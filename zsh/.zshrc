@@ -121,3 +121,5 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 sleep 0.25
 fastfetch
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
