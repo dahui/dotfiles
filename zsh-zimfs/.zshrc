@@ -51,6 +51,8 @@ _evalcache starship init zsh
 alias ls='eza -lah --color=always --icons=always --git --group-directories-first'
 alias cat='bat'
 alias claude="$HOME/.claude/local/claude"
+# Make "kubecolor" borrow the same completion logic as "kubectl"
+compdef kubecolor=kubectl
 alias kubectl='kubecolor'
 
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -60,8 +62,7 @@ export FZF_DEFAULT_OPTS='--style full --ansi --preview "bat --style=numbers --co
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza/
 
-# Make "kubecolor" borrow the same completion logic as "kubectl"
-# compdef kubecolor=kubectl
+
 
 # source local configs. (i.e. machine spacific, etc)
 if [[ -d "$HOME/zsh.local.d" ]]; then
