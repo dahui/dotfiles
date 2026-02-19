@@ -65,8 +65,8 @@ export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza/
 
 
 # source local configs. (i.e. machine spacific, etc)
-if [[ -d "$HOME/zsh.local.d" ]]; then
-  for file in $HOME/zsh.local.d/*.sh; do
+if [[ -d "$HOME/.zsh.local.d" ]]; then
+  for file in $HOME/.zsh.local.d/*.sh; do
     [[ -f "$file" ]] && source "$file"
   done
 fi
