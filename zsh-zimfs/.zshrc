@@ -23,7 +23,7 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Install missing modules and update ${ZIM_HOME}/init.zsh if missing or outdated.
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
-  if [[ $(uname) == "darwin" ]]; then
+  if [[ -f "/opt/homebrew/opt/zimfw/share/zimfw.zsh" ]]; then
     source /opt/homebrew/opt/zimfw/share/zimfw.zsh init
   elif [[ -f  "/usr/share/zimfw/zimfw.zsh" ]]; then
     source /usr/share/zimfw/zimfw.zsh init
@@ -47,7 +47,6 @@ fi
 
 # Generate our prompt
 _evalcache starship init zsh
-
 
 alias ls='eza -lah --color=always --icons=always --git --group-directories-first'
 alias cat='bat'
