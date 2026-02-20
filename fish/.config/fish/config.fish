@@ -39,3 +39,8 @@ else
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 end
 
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/606563/.lmstudio/bin
+# End of LM Studio CLI section
+

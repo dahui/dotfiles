@@ -46,16 +46,6 @@ alias cat='bat'
 alias claude="$HOME/.claude/local/claude"
 alias kubectl='kubecolor'
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export GOPATH="$HOME/dev/golang"
-export EDITOR='code -w'
-#export NVM_DIR="$HOME/.nvm"
-#  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-#  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export NODE_EXTRA_CA_CERTS=~/.zscaler-cert.pem
-export npm_config_python=`which python3`
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export FZF_DEFAULT_OPTS='--style full --ansi --preview "bat --style=numbers --color=always {}" --color "bg+:#313244,bg:#1E1E2E,spinner:#F5E0DC,hl:#F38BA8" --color "fg:#CDD6F4,header:#F38BA8,info:#CBA6F7,pointer:#F5E0DC" --color "marker:#B4BEFE,fg+:#CDD6F4,prompt:#CBA6F7,hl+:#F38BA8" --color "selected-bg:#45475A" --color "border:#6C7086,label:#CDD6F4"'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza/
@@ -64,3 +54,7 @@ export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza/
 compdef kubecolor=kubectl
 
 fastfetch
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/606563/.lmstudio/bin"
+# End of LM Studio CLI section
+

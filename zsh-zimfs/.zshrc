@@ -62,8 +62,6 @@ export FZF_DEFAULT_OPTS='--style full --ansi --preview "bat --style=numbers --co
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export EZA_CONFIG_DIR=$XDG_CONFIG_HOME/eza/
 
-
-
 # source local configs. (i.e. machine spacific, etc)
 if [[ -d "$HOME/.zsh.local.d" ]]; then
   for file in $HOME/.zsh.local.d/*.sh; do
