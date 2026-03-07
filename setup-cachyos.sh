@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Installing packages..."
-paru -Sy --noconfirm stow hhd hhd-ui acpi_call \
-    vivaldi ghostty linux-bazzite-bin cachyos-gaming-meta \
-    vscode bazaar protonup-qt protonplus sbctl ryzenadj dkms \
-    nerd-fonts wireguard-tools minio-client iio-sensor-proxy rofi
+paru -Sy --noconfirm stow z13ctl-bin z13gui-bin \
+    vivaldi ghostty cachyos-gaming-meta iio-sensor-proxy rofi \
+    vscode bazaar protonplus sbctl ryzenadj dkms \
+    nerd-fonts wireguard-tools minio-client 
 
 echo "configuring secure boot..."
 sudo sbctl create-keys
